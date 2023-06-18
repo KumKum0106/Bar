@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Seekbar"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textview1"/>
+
+    <!-- SeekBar - It is an extension of the ProgressBar. A user can touch the draggable thumb on the Seekbar
+    and move it left or right to change the value for the current progress.-->
+    <!-- Max value - define the maximum a SeekBar to take-->
+    <!-- Progress Drawable - used to set the custom drawable xml for the progress mode-->
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="200"
+        android:progress="30"
+        android:layout_below="@+id/textview1"
+        android:progressDrawable="@drawable/custom_progress"/>
+
+    <!-- Progress - define the default progress value -->
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:thumb="@drawable/hand"
+        android:max="200"
+        android:progress="50"
+        android:layout_below="@+id/seekbar"
+        android:id="@+id/seekbar2"
+        android:layout_marginTop="30dp"/>
+
+    <!-- Indeterminate - shows a cyclic animation without an indication of progress -->
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:max="200"
+        android:layout_below="@+id/seekbar2"
+        android:id="@+id/seekbar3"
+        android:layout_marginTop="30dp"/>
+
+    <!-- Background - Set a color or a drawable in the background of a Seekbar -->
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekbar4"
+        android:background="#064F4F"
+        android:layout_marginTop="30dp"
+        android:max="200"
+        android:layout_below="@+id/seekbar3"
+        android:progress="50"
+        android:padding="8dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Ratebar"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/seekbar4"
+        android:id="@+id/textview2"/>
+
+    <!-- RatingBar - used to get the rating from the app user.
+    numStars - used to set the number of stars to display
+    rating - set the default rating -->
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingBar"
+        android:background="#9CC5C5"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/textview2"
+        android:numStars="7"
+        android:rating="4.7"
+        android:padding="10dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingButton"
+        android:text="Rate"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_below="@id/ratingBar"
+        android:layout_marginLeft="165dp"/>
+
+</RelativeLayout>
